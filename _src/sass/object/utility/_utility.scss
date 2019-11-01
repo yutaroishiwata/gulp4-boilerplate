@@ -1,0 +1,58 @@
+@charset "utf-8";
+// -----------------------------------
+// Text
+// -----------------------------------
+.u-text--normal {
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+.u-text--bold {
+  font-weight: bold !important;
+}
+
+.u-text--italic {
+  font-style: italic !important;
+}
+
+.u-text--left {
+  text-align: left !important;
+}
+
+.u-text--center {
+  text-align: center !important;
+}
+
+.u-text--right {
+  text-align: right !important;
+}
+// -----------------------------------
+// hide /show element
+// -----------------------------------
+.u-hidden {
+  display: none !important;
+}
+
+.u-hidden--pc {
+  @media screen and (min-width: 1025px) {
+    display: none !important;
+  }
+}
+
+.u-hidden--ipad-pro {
+  @media screen and (max-width: $pc_point_mf) {
+    display: none !important;
+  }
+}
+
+.u-hidden--ipad {
+  @media screen and (max-width: $tablet_point_mf) {
+    display: none !important;
+  }
+}
+
+.u-hidden--sp {
+  @media screen and (max-width: $sp_point) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+//ボタンなど共通点のある複数種類のコンポーネントを作る場所ではSASSプレースホルダーを使うと便利。
+//SASSプレースホルダは必ず同一ファイル内でのみ使用すること。ファイルをまたいだ使い回し禁止。
+%button {
+  box-sizing: border-box;
+}
+
+.button {
+  @extend%button;
+}
+
+.button--primary {
+  @extend%button;
+}

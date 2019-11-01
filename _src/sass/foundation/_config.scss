@@ -1,0 +1,60 @@
+@charset "utf-8";
+// -----------------------------------
+// color
+// -----------------------------------
+$black: #333;//最も濃い黒。本文、タイトル
+$dark: #555; //やや濃い黒。ラベルなど
+$gray: #888;//やや薄い黒。補足的テキスト
+// -----------------------------------
+// column width
+// -----------------------------------
+$maxWidth: 980px;
+// -----------------------------------
+// font-family
+// -----------------------------------
+$fontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", Sans-Serif;
+// -----------------------------------
+// Break Points (PCファースト)
+// -----------------------------------
+//※PCファーストと、モバイルファーストのブレークポイントをなるべく混ぜない
+$pc_point: 1023.98px;
+$tablet_point: 767.98px;
+$sp_point: 479.98px;
+//iPad Pro以下
+//@media screen and (max-width: $pc_point) {}
+//iPad以下
+//@media screen and (max-width: $tablet_point) {}
+//iPad以下かつ横持ち
+//@media screen and (max-width: $tablet_point) and (orientation: landscape)  {}
+//iPad以下かつ縦持ち
+//@media screen and (max-width: $tablet_point) and (orientation: portrait) {}
+//スマートフォン以下
+//@media screen and (max-width: $sp_point_mf) {}
+
+// -----------------------------------
+// Break Points (モバイルファースト)
+// -----------------------------------
+$pc_point_mf: 1024px;
+$tablet_point_mf: 768px;
+$sp_point_mf: 480px;
+//デバイス横持ち
+//@media screen and (orientation: landscape) {}
+//デバイス縦持ち
+//@media screen and (orientation: portrait) {}
+//iPad以上
+//@media screen and (min-width: $sp_point_mf) {}
+//iPad以上かつ横持ち
+//@media screen and (min-width: $sp_point_mf) and (orientation: landscape)  {}
+//iPad以上かつ縦持ち
+//@media screen and (min-width: $sp_point_mf) and (orientation: portrait) {}
+//iPad Pro以上
+//@media screen and (min-width: $tablet_point_mf) {}
+//PC以上
+//@media screen and (min-width: $pc_point_mf) {}
+
+//タブレットだけ ※メディアクエリが複雑なのでなるべく使わない
+//@media screen and (min-width: $sp_point_mf) and (max-width: $pc_point_mf) {}
+//iPad Proだけ ※メディアクエリが複雑なのでなるべく使わない
+//@media screen and (min-width: $tablet_point_mf) and (max-width: $pc_point_mf) {}
+//iPadだけ ※メディアクエリが複雑なのでなるべく使わない
+//@media screen and (min-width: $sp_point_mf) and (max-width: $tablet_point_mf) {}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+//パンくずリストマークアップ例
+//<nav class="breadcrumb">
+//  <ul class="breadcrumb__list">
+//    <li class="breadcrumb__item"><a href="/">Home</a></li>
+//    <li class="breadcrumb__item is-active">現在のページ</li>
+//  </ul>
+//</nav>
+.breadcrumb{
+
+}
+
+.breadcrumb__list{
+
+}
+
+.breadcrumb__item {
+  a{
+
+  }
+
+  &.is-active{
+
+  }
+}
