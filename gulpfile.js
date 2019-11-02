@@ -7,6 +7,7 @@ const notify = require('gulp-notify');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
+const cssnano = require('gulp-cssnano');
 const csscomb = require('csscomb');
 const order = require('gulp-order');
 const babel = require('gulp-babel');
@@ -16,7 +17,7 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant');
-const htmlint = require('gulp-htmlhint');
+const htmlhint = require('gulp-htmlhint');
 const sasslint = require('stylelint-scss');
 const eslint = require('gulp-eslint');
 const browsersync = require('browser-sync').create();
@@ -67,8 +68,7 @@ function css() {
     .src([paths.styles.src, '!' + paths.styles.component])
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(csscomb())
+    .pipe(cssnano())
     .pipe(gulp.dest(paths.styles.dest, { sourcemaps: './maps' }));
 }
 
@@ -112,7 +112,7 @@ const imageminOption = [
 // HTML Lint
 function htmlLint() {
   return gulp
-    .src(paths.html.src)
+    .src(paths.markups.src)
     .pipe(htmlhint())
     .pipe(htmlhint.reporter());
 }
@@ -121,13 +121,13 @@ function htmlLint() {
 function sassLint() {
   return gulp
     .src(paths.styles.src)
-    .pipe(sassLint({config: ".stylelintrc.json"}));
+    .pipe(sassLint({config: '.stylelintrc.json'}));
 }
 
 // ESLint
 function esLint() {
   return gulp
-    .src([paths.scripts.src,  '!./src/js/core/**/*.js'])
+    .src([paths.scripts.src, '!./src/js/core/**/*.js'])
     .pipe(
       eslint({
         useEslintrc: true,
