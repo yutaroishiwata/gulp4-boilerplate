@@ -3,6 +3,7 @@
 // Load plugins
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
@@ -20,7 +21,6 @@ const sasslint = require('stylelint-scss');
 const eslint = require('gulp-eslint');
 const browsersync = require('browser-sync').create();
 const del = require('del');
-const notify = require('gulp-notify');
 const prettify = require('gulp-prettify');
 const replace = require('gulp-replace');
 
@@ -41,7 +41,6 @@ const paths = {
   },
   scripts: {
     src: './_src/js/**/*.js',
-    jsx: './_src/js/**/*.jsx',
     dest: './dist/js',
     map: './dist/js/maps',
     core: '_src/js/core/**/*.js',
@@ -86,7 +85,6 @@ function js() {
     .pipe(gulp.dest(paths.scripts.dest, { sourcemaps: './maps' }));
 }
 
-
 // Optimize Images
 function img() {
   return gulp
@@ -123,13 +121,13 @@ function htmlLint() {
 function sassLint() {
   return gulp
     .src(paths.styles.src)
-    .pipe(sasslint({config: "scss-lint.yml"}));
+    .pipe(sassLint({config: ".stylelintrc.json"}));
 }
 
 // ESLint
 function esLint() {
   return gulp
-    .src([paths.scripts.src, paths.scripts.jsx, '!./src/js/core/**/*.js'])
+    .src([paths.scripts.src,  '!./src/js/core/**/*.js'])
     .pipe(
       eslint({
         useEslintrc: true,
