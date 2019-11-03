@@ -6,14 +6,13 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
-const autoprefixer = require('autoprefixer');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const csscomb = require('csscomb');
 const order = require('gulp-order');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant');
@@ -45,7 +44,6 @@ const paths = {
     dest: './dist/js',
     map: './dist/js/maps',
     core: '_src/js/core/**/*.js',
-    app: '_src/js/app/**/*.js',
   },
   images: {
     src: './_src/img/**/*.{jpg,jpeg,png,svg,gif}',
@@ -56,7 +54,7 @@ const paths = {
 // HTML
 function html() {
   return gulp
-  .src([paths.markups.src, '!' + paths.markups.module])
+    .src([paths.markups.src, '!' + paths.markups.module])
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(pug({pretty: '\t', doctype: 'html'}))
     .pipe(gulp.dest(paths.markups.dest));
@@ -67,8 +65,10 @@ function css() {
   return gulp
     .src([paths.styles.src, '!' + paths.styles.component])
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
-    .pipe(sass())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(cssnano())
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(paths.styles.dest, { sourcemaps: './maps' }));
 }
 
@@ -76,7 +76,7 @@ function css() {
 function js() {
   return gulp
     .src(paths.scripts.src, { sourcemaps: true })
-    .pipe(order([paths.scripts.core, paths.scripts.app], { base: './' }))
+    .pipe(order([paths.scripts.core]))
     .pipe(babel({presets: ['@babel/env'],}))
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(concat('lib.js'))
