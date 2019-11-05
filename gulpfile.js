@@ -34,13 +34,13 @@ const paths = {
     dest: './dist/',
   },
   styles: {
-    src: './_src/sass/**/*.s+(a|c)ss',
-    component: './_src/sass/**/_*.s+(a|c)ss',
+    src: './_src/sass/**/*.scss',
+    component: './_src/sass/**/_*.scss',
     dest: './dist/css',
     map: './dist/css/maps',
   },
   scripts: {
-    src: './_src/js/**/*.js',
+    src: './_src/js/main.js',
     dest: './dist/js',
     map: './dist/js/maps',
     core: '_src/js/core/**/*.js',
