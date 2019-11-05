@@ -1,7 +1,15 @@
 # Gulp4 boileplate
-> Front-end development workflow using Gulp 4
+Front-end development workflow using Gulp 4
 
-### directory layout
+## How to use
+Clone the repo and run
+```
+$ git clone https://github.com/yutaroishiwata/gulp4-boilerplate
+$ npm install
+$ gulp watch
+```
+
+## directory layout
 ```
 dist
 ├── base
