@@ -63,7 +63,7 @@ _src
     └── style.scss
 ```
 
-## List of Gulp plugin
+## List of using Gulp plugin
 
 |Plugin name        | Description                         
 |:------------------|:----------------------------------
