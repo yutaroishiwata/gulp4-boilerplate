@@ -68,7 +68,7 @@ _src
 |Plugin name        | Description                         
 |:------------------|:----------------------------------
 | [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) | Prevent pipe breaking caused by errors from gulp plugins |
-| [gulp-pug](Gulp plugin for compiling Pug templates)        | Gulp plugin for compiling Pug templates              |
+| [gulp-pug](https://www.npmjs.com/package/gulp-pug)        | Gulp plugin for compiling Pug templates              |
 | [gulp-sass](https://www.npmjs.com/package/gulp-sass)       | compile your Sass files      |
 | [autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) | Prefix CSS with Autoprefixer              |
 | [csscomb](https://www.npmjs.com/package/csscomb)           | coding style formatter for CSS              |
