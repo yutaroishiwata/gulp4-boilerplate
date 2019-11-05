@@ -61,3 +61,30 @@ _src
     │       ├── _clearfix.scss
     │       └── _utility.scss
     └── style.scss
+```
+
+## List of Gulp plugin
+
+|Plugin name        | Description                         
+|:------------------|:----------------------------------
+| [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) | Prevent pipe breaking caused by errors from gulp plugins |
+| [gulp-pug](Gulp plugin for compiling Pug templates)        | Gulp plugin for compiling Pug templates              |
+| [gulp-sass](https://www.npmjs.com/package/gulp-sass)       | compile your Sass files      |
+| [autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) | Prefix CSS with Autoprefixer              |
+| [csscomb](https://www.npmjs.com/package/csscomb)           | coding style formatter for CSS              |
+| [gulp-order](https://www.npmjs.com/package/gulp-order)     | reorder a stream of files                            |
+| [gulp-babel](https://www.npmjs.com/package/gulp-babel)     | JS transpiler                            |
+| [gulp-concat](https://www.npmjs.com/package/gulp-concat)   | combine multiple files into one                      |
+| [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)    | JS Minifier                       |
+| [gulp-rename](https://www.npmjs.com/package/gulp-rename)    | simple file renaming                    |
+| [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)     | Minify PNG, JPEG, GIF and SVG images      |
+| imagemin-mozjpeg  |                                           |
+| imagemin-pngquant |                                           |
+| HTML Lint         |                                           |
+| gulp-htmlint      |                            |
+| SASS Lint         |                                           |
+| gulp-scsslint     |                                           |
+| JS Lint           |                                           |
+| ES lint           |                                           |
+| browser-sync      |                                           |
+
