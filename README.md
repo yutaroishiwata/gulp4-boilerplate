@@ -1,5 +1,5 @@
 # Gulp4 boileplate
-Front-end development workflow using Gulp 4
+Front-end development boilerplate using Gulp 4
 
 ## How to use
 Clone the repo and run
@@ -9,7 +9,7 @@ $ npm install
 $ gulp watch
 ```
 
-## directory layout
+## File Structure
 ```
 dist
 ├── base
@@ -87,4 +87,12 @@ _src
 | JS Lint           |                                           |
 | ES lint           |                                           |
 | browser-sync      |                                           |
+
+## CSS Architecture
+BEM & Atomic design.
+[BEM](http://getbem.com/naming/) (Block Element Modifier)
+The standard syntax for BEM.
+```
+block-name__element-name--modifier-name
+```
 
