@@ -88,11 +88,12 @@ _src
 | ES lint           |                                           |
 | browser-sync      |                                           |
 
-## CSS Architecture
-BEM & Atomic design.
-[BEM](http://getbem.com/naming/) (Block Element Modifier)
-The standard syntax for BEM.
+## CSS Naming conventions and Architecture
+BEM & Atomic design.  
+[BEM](http://getbem.com/naming/) (Block Element Modifier)  
+The standard syntax for BEM:
 ```
 block-name__element-name--modifier-name
 ```
+[Atomic design](https://bradfrost.com/blog/post/atomic-web-design/) (Atoms, Molecules, Organisms, templates, Pages)
 
