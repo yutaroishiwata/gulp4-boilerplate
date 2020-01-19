@@ -78,7 +78,7 @@ _src
 | [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)    | JS Minifier                       |
 | [gulp-rename](https://www.npmjs.com/package/gulp-rename)    | simple file renaming                    |
 | [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)     | Minify PNG, JPEG, GIF and SVG images      |
-| imagemin-mozjpeg  |                                           |
+| [imagemin-mozjpeg](https://www.npmjs.com/package/imagemin-mozjpeg-full)|Imagemin plugin for all mozjpeg binaries|
 | imagemin-pngquant |                                           |
 | HTML Lint         |                                           |
 | gulp-htmlint      |                            |
