@@ -79,7 +79,7 @@ _src
 | [gulp-rename](https://www.npmjs.com/package/gulp-rename)    | simple file renaming                    |
 | [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)     | Minify PNG, JPEG, GIF and SVG images      |
 | [imagemin-mozjpeg](https://www.npmjs.com/package/imagemin-mozjpeg-full)|Imagemin plugin for all mozjpeg binaries|
-| imagemin-pngquant |                                           |
+| [imagemin-pngquant](https://www.npmjs.com/package/htmllint) |html5 linter and validator.|
 | HTML Lint         |                                           |
 | gulp-htmlint      |                            |
 | SASS Lint         |                                           |
